@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas{
+            border: solid 1px #00132c;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="300" height="300" id="canvas"></canvas>
+    <script>
+        function init(){
+            var canvas=document.getElementById('canvas');
+            var cxt=canvas.getContext('2d');
+
+            cxt.beginPath();
+            cxt.arc(100,100,50,0,360*Math.PI/180,true);
+            cxt.closePath();
+            cxt.strokeStyle='red';
+            cxt.stroke();
+        }
+        init();
+    </script>
+</body>
+</html>
